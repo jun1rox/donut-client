@@ -1,0 +1,40 @@
+.tabela {
+  text-transform: uppercase;
+  padding: 20px 20px;
+  border-spacing: 0;
+
+  &__header {
+
+
+    &__linha {
+      font-weight: 500;
+      text-align: center;
+      color: white;
+      font-size: larger;
+      padding: 10px 30px;
+      border-bottom: 2px solid bisque;
+    }
+  }
+
+  &__body {
+    &__linha {
+
+      &__info {
+        text-align: center;
+        padding: 15px 10px 0 10px;
+        color: #363434
+      }
+
+      &__icone {
+        padding: 15px 2.5px 0 2.5px;
+
+        img:hover {
+          cursor: pointer;
+          opacity: 0.7;
+        }
+
+      }
+    }
+
+  }
+}

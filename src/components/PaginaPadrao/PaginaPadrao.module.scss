@@ -1,0 +1,76 @@
+.container {
+  background-image: url('../../granulado.png');
+  background-repeat: repeat;
+  height: max-content;
+  font-family: 'Anton', serif;
+  letter-spacing: 2px;
+}
+
+.paginas {
+  display: flex;
+  flex-direction: row;
+  height: 92vh;
+  justify-content: space-around;
+  text-transform: uppercase;
+
+  &__botoes {
+    margin: 90px 30px;
+    display: flex;
+    align-items: center;
+    width: 25vw;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &__botao {
+      box-shadow: rgb(209 209 209 / 52%) 4px 5px 3px 0px, rgb(150 150 150 / 20%) 0px -12px 30px, rgb(117 117 117 / 20%) 0px 4px 6px, rgb(181 181 181 / 20%) 0px 12px 13px, rgb(150 150 150 / 20%) 0px -3px 5px;
+      background-color: #ED91AD;
+      border: none;
+      border-radius: 50px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: white;
+      user-select: none;
+      width: 320px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    &__botao:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__lista {
+    margin: 50px 30px;
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    width: 700px;
+    align-content: flex-start;
+    justify-content: center;
+    opacity: 0.95;
+    background-color: #ed91ad;
+    border-radius: 50px;
+    box-shadow: rgb(209 209 209 / 52%) 4px 5px 3px 0px, rgb(150 150 150 / 20%) 0px -12px 30px, rgb(117 117 117 / 20%) 0px 4px 6px, rgb(181 181 181 / 20%) 0px 12px 13px, rgb(150 150 150 / 20%) 0px -3px 5px;
+
+    h3 {
+      margin: 20px;
+    }
+
+    &__pagina {
+      width: 700px;
+      height: 110px;
+      border: 1px solid black;
+      color: white;
+      margin: 10px;
+      display: flex;
+      padding: 10px;
+      background-color: #FCE4D8;
+    }
+
+    &__vazia {
+      font-size: xx-large;
+      color: white;
+    }
+  }
+}
