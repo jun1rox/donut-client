@@ -25,11 +25,17 @@ export default function Funcionarios() {
 
   const colunas: string[] = ['nome', 'cpf', 'cargo', 'salario'];
 
-  const getEmployees = () => {
+  function getEmployees() {
     Axios.get('https://donut-factory.herokuapp.com/funcionario/list').then((response) => {
       setEmployeeList(response.data);
     });
-  };
+  }
+
+  function getFiliais() {
+    Axios.get('https://donut-factory.herokuapp.com/compra/listFiliais').then((response) => {
+      setFiliaisList(response.data);
+    });
+  }
 
   const updateFuncionario = (codigo: number) => {
     Axios.put('https://donut-factory.herokuapp.com/funcionario/update', { salary: newSalary, id: id }).then(
@@ -52,11 +58,10 @@ export default function Funcionarios() {
     )
   }
 
-  Axios.get('https://donut-factory.herokuapp.com/compra/listFiliais').then((response) => {
-    setFiliaisList(response.data);
-  });
-
-  useEffect(getEmployees, []);
+  useEffect(() => {
+    getEmployees();
+    getFiliais();
+  }, []);
 
   return (
     <>

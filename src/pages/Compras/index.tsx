@@ -30,15 +30,23 @@ export default function Compras() {
     });
   }
 
-  Axios.get('https://donut-factory.herokuapp.com/compra/listClientes').then((response) => {
-    setClientesList(response.data);
-  });
+  function getClientesList() {
+    Axios.get('https://donut-factory.herokuapp.com/compra/listClientes').then((response) => {
+      setClientesList(response.data);
+    });
+  }
 
-  Axios.get('https://donut-factory.herokuapp.com/compra/listFiliais').then((response) => {
-    setFiliaisList(response.data);
-  });
+  function getFiliaisList() {
+    Axios.get('https://donut-factory.herokuapp.com/compra/listFiliais').then((response) => {
+      setFiliaisList(response.data);
+    });
+  }
 
-  useEffect(getCompras, []);
+  useEffect(() => {
+    getCompras();
+    getClientesList();
+    getFiliaisList();
+  }, []);
 
   return (
     <>
