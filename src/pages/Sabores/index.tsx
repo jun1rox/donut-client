@@ -68,7 +68,7 @@ export default function Sabores() {
     )
   }
 
-  useEffect(getSabores, [saborList]);
+  useEffect(getSabores, []);
 
   return (
     <>

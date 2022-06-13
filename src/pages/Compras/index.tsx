@@ -38,7 +38,7 @@ export default function Compras() {
     setFiliaisList(response.data);
   });
 
-  useEffect(getCompras, [comprasList]);
+  useEffect(getCompras, []);
 
   return (
     <>

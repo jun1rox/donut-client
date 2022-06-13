@@ -32,7 +32,7 @@ export default function Funcionarios() {
   };
 
   const updateFuncionario = (codigo: number) => {
-    Axios.put('https://donut-factory.herokuapp.com/funcionario/update', {salary: newSalary, id: id}).then(
+    Axios.put('https://donut-factory.herokuapp.com/funcionario/update', { salary: newSalary, id: id }).then(
       (response) => {
         setEmployeeList(employeeList.map((val: Funcionario) => {
           return val.id == codigo
@@ -56,7 +56,7 @@ export default function Funcionarios() {
     setFiliaisList(response.data);
   });
 
-  useEffect(getEmployees, [employeeList]);
+  useEffect(getEmployees, []);
 
   return (
     <>

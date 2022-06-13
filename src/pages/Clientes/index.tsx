@@ -58,7 +58,7 @@ export default function Clientes() {
     )
   }
 
-  useEffect(getClients, [clientList]);
+  useEffect(getClients, []);
 
   return (
     <>

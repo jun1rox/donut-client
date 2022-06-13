@@ -46,7 +46,7 @@ export default function Filiais() {
     );
   }
 
-  useEffect(getFiliais, [filialList]);
+  useEffect(getFiliais, []);
 
   return (
     <>
